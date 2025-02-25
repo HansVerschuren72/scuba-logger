@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Scuba Dive Logger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Scuba Dive Logger</h1>
+    
+    <form id="diveForm">
+        <label>Datum: <input type="date" name="date" required></label>
+        <label>Locatie: <input type="text" name="location" required></label>
+        <label>Diepte (m): <input type="number" name="depth" required min="0"></label>
+        <label>Duur (min): <input type="number" name="duration" required min="0"></label>
+        <label>Notities: <textarea name="notes"></textarea></label>
+        <button type="submit">Duik Opslaan</button>
+    </form>
+
+    <!-- Optioneel: Statistieken en export -->
+    <h2>Statistieken</h2>
+    <div id="stats"></div>
+    <div style="text-align: center; margin: 20px;">
+        <button onclick="window.location.href='/api/dives/export/csv'">Export naar CSV</button>
+        <button onclick="window.location.href='/api/dives/export/pdf'">Export naar PDF</button>
+    </div>
+
+    <h2>Mijn Duiken</h2>
+    <div id="diveList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

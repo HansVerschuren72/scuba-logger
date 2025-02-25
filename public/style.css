@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px; /* Minder padding op kleine schermen */
+    background-image: url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Volle breedte op mobiel */
+    max-width: 500px; /* Maar niet breder dan 500px */
+    margin: 0 auto;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Velden vullen de breedte */
+    box-sizing: border-box; /* Zorgt dat padding binnen breedte valt */
+}
+
+textarea {
+    height: 120px; /* Iets kleiner op mobiel */
+    resize: vertical;
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.dive-entry {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dive-entry button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#stats {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media query voor mobiele schermen */
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+    h1 {
+        font-size: 24px; /* Kleinere titel */
+    }
+    h2 {
+        font-size: 20px;
+    }
+    form {
+        padding: 10px;
+    }
+    input, textarea {
+        font-size: 14px; /* Kleinere tekst */
+    }
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .dive-entry {
+        padding: 10px;
+    }
+    .dive-entry button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
