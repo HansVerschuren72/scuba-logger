@@ -87,7 +87,7 @@ app.listen(port, '0.0.0.0', () => {
 
 const { Parser } = require('json2csv');
 const PDFDocument = require('pdfkit');
-const fs = require('fs');
+
 
 // CSV export
 app.get('/api/dives/export/csv', (req, res) => {
