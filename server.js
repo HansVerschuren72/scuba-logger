@@ -1,7 +1,7 @@
 const express = require('express');
 const db = require('./database.js');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -16,7 +16,7 @@ app.get('/api/dives', (req, res) => {
     res.json(rows);
   });
 });
-
+ 
 // Voeg een nieuwe duik toe
 app.post('/api/dives', (req, res) => {
   const { date, location, depth, duration, notes } = req.body;
